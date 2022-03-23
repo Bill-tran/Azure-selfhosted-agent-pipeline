@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: selfhosted-agents
-          image: ACR_NAME/REPOSITORY_NAME:latest
+          #image: ACR_NAME/REPOSITORY_NAME:latest
+          image: avaxia/selfhosted-agent:v1
           ports:
           - containerPort: 80
           resources:
