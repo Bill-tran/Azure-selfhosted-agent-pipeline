@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: azdevops-deployment 
+  namespace: selfhosted-agent
 spec:
   replicas: 3
   progressDeadlineSeconds: 1800
@@ -16,7 +17,7 @@ spec:
       containers:
         - name: selfhosted-agents
           #image: ACR_NAME/REPOSITORY_NAME:latest
-          image: avaxia/selfhosted-agent:v1
+          image: avaxia.azurecr.io/agent:latest
           ports:
           - containerPort: 80
           resources:
