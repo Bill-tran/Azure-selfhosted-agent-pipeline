@@ -53,5 +53,5 @@ stages:
             displayName: 'Deploy'
             inputs:
                 script: |
-                  kubectl apply -f ReplicationController.yml      
+                  kubectl apply -f deployment.yml      
               
