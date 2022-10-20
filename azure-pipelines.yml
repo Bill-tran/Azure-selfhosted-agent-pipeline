@@ -20,7 +20,7 @@ stages:
          inputs:
             script: |
               docker build -t agents:latest .
-              docker login $(acrRegistry) --username $(acrusername) --password $(azureACRToken)
+              docker login $(acrRegistry).azurecr.io --username $(acrusername) --password $(azureACRToken)
               docker tag agents $(acrRegistry)/$(acrRepository)
               docker push $(acrRegistry)/$(acrRepository)
 - stage: DeployDockerBuidAgentStage
