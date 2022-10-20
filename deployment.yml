@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: azdevops-deployment 
-  namespace: selfhosted-agent
+  namespace: default
 spec:
   replicas: 3
   progressDeadlineSeconds: 1800
