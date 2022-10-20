@@ -21,8 +21,8 @@ stages:
             script: |
               docker build -t agents:latest .
               docker login $(acrRegistry).azurecr.io --username $(acrusername) --password $(azureACRToken)
-              docker tag agents $(acrRegistry)/$(acrRepository)
-              docker push $(acrRegistry)/$(acrRepository)
+              docker tag agents $(acrRegistry).azurecr.io/$(acrRepository)
+              docker push $(acrRegistry).azurecr.io/$(acrRepository)
 - stage: DeployDockerBuidAgentStage
   displayName: Deploy Agents on AKS cluster
   dependsOn: Build
